@@ -1,8 +1,36 @@
+import {useRouter} from "next/router";
+import React = require("react");
+
 export default {
-    logo: <span>Golang Uzbekistan</span>,
+    // logo: <strong>Golang Uzbekistan</strong>,
+    logo: (
+        <>
+               <img width="70" src="https://go.dev/blog/go-brand/Go-Logo/PNG/Go-Logo_Aqua.png"/>
+            <span style={{ marginLeft: '.4em', fontWeight: 800 }}>
+        <strong>Golang Uzbekistan</strong>
+      </span>
+        </>
+    ),
     project: {
         link: 'https://github.com/golang-uz',
     },
+    useNextSeoProps() {
+        const { asPath } = useRouter();
+        if (asPath !== "/") {
+            return {
+
+            };
+        }
+    },
+    head: (
+        <>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <meta property="og:title" content="Nextra" />
+            <meta property="og:description" content="The next site builder" />
+            <link rel="icon" type="image/x-icon" href="https://go.dev/blog/go-brand/Go-Logo/SVG/Go-Logo_Aqua.svg"/>
+        </>
+    ),
+
     search: {
         emptyResult: (
             <div className="text-center">Hech narsa topilmadi</div>
@@ -18,6 +46,11 @@ export default {
         content: "Savollar? Bizga xat qoldiring →",
         labels: "feedback",
     },
+    navigation: {
+        prev: true,
+        next: true
+    },
+    primaryHue:178,
     docsRepositoryBase: 'https://github.com/golang-uz',
     sidebar: {
         titleComponent({ title, type }) {
