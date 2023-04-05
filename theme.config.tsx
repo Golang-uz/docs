@@ -28,7 +28,7 @@ export default {
     const { route } = useRouter();
     const socialCard =
         route === "/" || !title
-            ? "https://go.dev/blog/go-brand/Go-Logo/SVG/Go-Logo_Aqua.svg"
+            ? "https://go.dev/blog/go-brand/Go-Logo/PNG/Go-Logo_Aqua.png"
             : `https://golang-uz.netlify.app/`;
 
         return(
