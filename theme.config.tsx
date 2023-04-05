@@ -50,6 +50,7 @@ export default {
         prev: true,
         next: true
     },
+    defaultShowCopyCode: true,
     primaryHue:178,
     docsRepositoryBase: 'https://github.com/golang-uz',
     sidebar: {
