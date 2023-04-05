@@ -1,5 +1,6 @@
 import {useRouter} from "next/router";
 import React = require("react");
+import {useConfig} from "nextra-theme-docs";
 
 export default {
     // logo: <strong>Golang Uzbekistan</strong>,
@@ -18,18 +19,32 @@ export default {
         const { asPath } = useRouter();
         if (asPath !== "/") {
             return {
-
+                titleTemplate: "%s – GO",
             };
         }
     },
-    head: (
+  head: function useHead() {
+    const { title } = useConfig();
+    const { route } = useRouter();
+    const socialCard =
+        route === "/" || !title
+            ? "https://go.dev/blog/go-brand/Go-Logo/SVG/Go-Logo_Aqua.svg"
+            : `https://golang-uz.netlify.app/`;
+
+        return(
         <>
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             <meta property="og:title" content="Nextra" />
             <meta property="og:description" content="The next site builder" />
             <link rel="icon" type="image/x-icon" href="https://go.dev/blog/go-brand/Go-Logo/SVG/Go-Logo_Aqua.svg"/>
+            <meta
+                name="og:description"
+                content="O'zbek dasturchilari tomonidan qo'llab quvvatlanadigan Golang hamjamiyati."
+            />
+            <meta name="og:title" content={title ? title + " – Golang" : "Golang"} />
         </>
-    ),
+    );
+        },
 
     search: {
         emptyResult: (
