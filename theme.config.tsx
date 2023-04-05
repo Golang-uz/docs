@@ -46,7 +46,7 @@ export default {
                 content="O'zbek dasturchilari tomonidan qo'llab quvvatlanadigan Golang hamjamiyati."
             />
             <meta name="twitter:card" content="summary_large_image" />
-            <meta name="twitter:image" content={socialCard} />
+            <meta name="twitter:image" content="https://go.dev/blog/go-brand/Go-Logo/PNG/Go-Logo_Aqua.png" />
             <meta name="twitter:site:domain" content="golang-uz.netlify.app" />
             <meta name="twitter:url" content="https://golang-uz.netlify.app/" />
             <meta name="og:title" content={title ? title + " – Golang" : "Golang"} />
