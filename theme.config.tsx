@@ -50,6 +50,8 @@ export default {
             <meta name="twitter:site:domain" content="golang-uz.netlify.app" />
             <meta name="twitter:url" content="https://golang-uz.netlify.app/" />
             <meta name="og:title" content={title ? title + " – Golang" : "Golang"} />
+            <meta name="og:image" content="https://go.dev/blog/go-brand/Go-Logo/PNG/Go-Logo_Aqua.png" />
+            <meta name="apple-mobile-web-app-title" content="Golang Uzbekistan" />
         </>
     );
         },
