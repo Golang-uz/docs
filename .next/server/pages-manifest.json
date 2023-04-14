@@ -1,9 +1,0 @@
-{
-  "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
-  "/_document": "pages/_document.js",
-  "/Installation/Windows": "pages/Installation/Windows.js",
-  "/": "pages/index.js",
-  "/Installation/Linux": "pages/Installation/Linux.js",
-  "/Installation/MacOs": "pages/Installation/MacOs.js"
-}
