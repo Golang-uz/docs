@@ -1,0 +1,45 @@
+## MacOS uchun
+    1.[Brew](https://brew.sh/) saytiga o'tib [brew]() o'rnatish packageni o'rnatamiz \
+    2. Quyidagi kodni yozamiz
+ ```sh copy
+brew install go
+```
+    3. O'rnatilgach
+ ```sh copy
+go version
+```
+kodini yozib golangni o'rnatilgani yoki o'rnatilmaganini aniqlab olishiz mumkin. Agar o'rnatilgan bo'lsa terminalda quyidagi yozuv chiqadi.
+```sh
+go version go1.20.2 darwin/amd64
+```
+bunda 1.20.2 hozirgi vaqttagi versiyasi sizda boshqacha versiya chiqishi mumkin
+
+O'rnatilib bo'lgach biz  ```GOPATH``` ni sozlashimiz kerak bo'ladi. Bu bizga kompyuterimizni workspace sida
+golang kodimizni ishklatish imkonini beradi. Buning uchun biz ```Shell``` nomini aniqlab olishimiz kerak.
+
+```sh copy
+echo "$SHELL"
+```
+bu bizga Shell imizni nomini ko'rsatadi
+
+```shell
+  /bin/zsh yoki /bin/bash
+```
+Shell nomiga qarab siz quyidagi komanda bilan terminalda shell configini ochasiz.
+
+``` mdx filename="bash" copy
+vim .bashrc
+```
+
+``` mdx filename="zsh" copy
+vim .zshrc
+```
+
+vim editori  orqali  config file ga kirib olgach quyidagi command ni yozib qoyamiz
+
+```sh copy
+export GOPATH="$HOME/.go"
+```
+
+so'ng editorda `esc` tugmasini bosib `:wq` komandasini yozib yozganimizni saqlab file dan chiqib ketamiz.
+

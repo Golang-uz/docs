@@ -15,10 +15,25 @@
   ],
   "rootMainFiles": [],
   "pages": {
-    "/Boshlash/Ornatish": [
+    "/": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/Boshlash/Ornatish.js"
+      "static/chunks/pages/index.js"
+    ],
+    "/Installation/Linux": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/Installation/Linux.js"
+    ],
+    "/Installation/MacOs": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/Installation/MacOs.js"
+    ],
+    "/Installation/Windows": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/Installation/Windows.js"
     ],
     "/_app": [
       "static/chunks/webpack.js",

@@ -1,0 +1,35 @@
+## Linux uchun
+
+Terminal ochib Go-ni oxirgi versiyasini yuklab olib:
+
+```sh copy
+curl -LSO https://go.dev/dl/go1.20.3.linux-amd64.tar.gz
+```
+
+Keyin Go ni o'rnatish uchun quyidagi kodni yozing:
+
+```sh copy
+rm -rf /usr/local/go && tar -C /usr/local -xzf go1.20.3.linux-amd64.tar.gz
+```
+
+(Kodni root sifatida yoki sudo orqali ishga tushirishingiz kerak bo'lishi mumkin unda boshida "sudo" ni qo'shib qo'ying).
+
+PATH muhit o'zgaruvchisiga /usr/local/go/bin qo'shing
+
+Buni $HOME/.profile yoki /etc/profile ga (tizim boʻylab oʻrnatish uchun) quyidagi kodni qo'shib qo'ying:
+
+```sh copy
+export PATH=$PATH:/usr/local/go/bin
+```
+
+Eslatma: Profil fayliga kiritilgan o'zgartirishlar keyingi safar kompyuteringizga login qilguncha qo'llanilmasligi mumkin. O'zgarishlarni darhol qo'llash uchun quyidagi kodni to'g'ridan-to'g'ri terminalga yozing:
+
+```sh copy
+source $HOME/.profile
+```
+
+Terminal ochib, quyidagi kodni kiritish orqali Go-ni o'rnatganingizni tasdiqlang:
+
+```sh copy
+go version
+```
