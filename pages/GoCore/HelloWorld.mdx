@@ -1,0 +1,34 @@
+
+## Golangda birinchi yozgan kodimiz
+
+``` mdx filename="helloWorld.go" go copy
+package main
+import "fmt"
+func main() {
+    fmt.Println("hello world")
+}
+```
+
+Bu kodni natijasini olish uchun terminalda quyidagi komandani yozamiz:
+``` sh copy
+go run helloWorld.go  #hello world  yozuvi chiqadi
+```
+
+Ba'zi holatlarda bizga binary holattagi kod kerak bo'ladi ya'ni kodni build qilingani bu bizga doimiy bir xil ```go run```
+ komandasini ishlatishni oldini olib tayyor kompilatsiya bolgan kod natijasini qaytaradi. Buning uchun biz terminalga:
+
+``` sh copy
+go build helloWorld.go
+```
+
+Bu bizlarga ```helloWorld``` binary holattagi kompilatsiyalini  yaratadi.
+Yaratilgan dasturni ishga tushirish uchun quyidagi komandani yozamiz:
+
+``` sh copy
+./helloWorld.go #hello world  yozuvi chiqadi
+```
+
+Golang paketlar ustiga qurilgan til bo'lib asosiy paket bu ```main``` paket nomi bo'lib bu paket bo'lmagan kod build bo'lmaydi.
+```fmt``` bu standart kutubxona bo'lib o'zida ko'plab funksiyalarni olib keladi bulardan biri ```fmt.Println()``` dasturni natijasini chiqarib 1 qator pastga tushadi.
+
+

@@ -1,4 +1,8 @@
 
 {
-  "index": "Kirish"
+  "index": "Kirish",
+  "Installation": "Install Go",
+  "Setups": "Setup your developer tools",
+  "GoCore": "Golang Basics"
+
 }
