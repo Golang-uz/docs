@@ -1,0 +1,98 @@
+import { Tab, Tabs } from 'nextra-theme-docs'
+
+<Tabs items={['Linux', 'MacOS', 'Windows']}>
+
+    <Tab >
+
+
+        Terminal ochib Go-ni oxirgi versiyasini yuklab olib:
+
+        ```sh copy
+        curl -LSO https://go.dev/dl/go1.20.3.linux-amd64.tar.gz
+        ```
+
+        Keyin Go ni o'rnatish uchun quyidagi kodni yozing:
+
+        ```sh copy
+        rm -rf /usr/local/go && tar -C /usr/local -xzf go1.20.3.linux-amd64.tar.gz
+        ```
+
+        (Kodni root sifatida yoki sudo orqali ishga tushirishingiz kerak bo'lishi mumkin unda boshida "sudo" ni qo'shib qo'ying).
+
+        PATH muhit o'zgaruvchisiga /usr/local/go/bin qo'shing
+
+        Buni $HOME/.profile yoki /etc/profile ga (tizim boʻylab oʻrnatish uchun) quyidagi kodni qo'shib qo'ying:
+
+        ```sh copy
+        export PATH=$PATH:/usr/local/go/bin
+        ```
+
+        Eslatma: Profil fayliga kiritilgan o'zgartirishlar keyingi safar kompyuteringizga login qilguncha qo'llanilmasligi mumkin. O'zgarishlarni darhol qo'llash uchun quyidagi kodni to'g'ridan-to'g'ri terminalga yozing:
+
+        ```sh copy
+        source $HOME/.profile
+        ```
+
+        Terminal ochib, quyidagi kodni kiritish orqali Go-ni o'rnatganingizni tasdiqlang:
+
+        ```sh copy
+        go version
+        ```
+    </Tab>
+    <Tab>
+        1.[Brew](https://brew.sh/) saytiga o'tib [brew]() o'rnatish packageni o'rnatamiz \
+        2. Quyidagi kodni yozamiz
+        ```sh copy
+        brew install go
+        ```
+        3. O'rnatilgach
+        ```sh copy
+        go version
+        ```
+        kodini yozib golangni o'rnatilgani yoki o'rnatilmaganini aniqlab olishiz mumkin. Agar o'rnatilgan bo'lsa terminalda quyidagi yozuv chiqadi.
+        ```sh
+        go version go1.20.2 darwin/amd64
+        ```
+        bunda 1.20.2 hozirgi vaqttagi versiyasi sizda boshqacha versiya chiqishi mumkin
+
+        O'rnatilib bo'lgach biz  ```GOPATH``` ni sozlashimiz kerak bo'ladi. Bu bizga kompyuterimizni workspace sida
+        golang kodimizni ishklatish imkonini beradi. Buning uchun biz ```Shell``` nomini aniqlab olishimiz kerak.
+
+        ```sh copy
+        echo "$SHELL"
+        ```
+        bu bizga Shell imizni nomini ko'rsatadi
+
+        ```shell
+        /bin/zsh yoki /bin/bash
+        ```
+        Shell nomiga qarab siz quyidagi komanda bilan terminalda shell configini ochasiz.
+
+        ``` mdx filename="bash" copy
+        vim .bashrc
+        ```
+
+        ``` mdx filename="zsh" copy
+        vim .zshrc
+        ```
+
+        vim editori  orqali  config file ga kirib olgach quyidagi command ni yozib qoyamiz
+
+        ```sh copy
+        export GOPATH="$HOME/.go"
+        ```
+
+        so'ng editorda `esc` tugmasini bosib `:wq` komandasini yozib yozganimizni saqlab file dan chiqib ketamiz.
+    </Tab>
+    <Tab>
+        Ushbu  [Link](https://go.dev/dl/go1.20.3.windows-amd64.msi) orqali Golangni yuklab olishingiz va o'rnatishingiz mumkin.
+
+        O'rnatib bo'lgach
+        ``` sh copy
+        go version
+        ```
+        komandasini cmd ga yozib versiyasini tekshirishingiz mumkin.
+
+    </Tab>
+
+</Tabs>

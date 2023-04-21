@@ -1,9 +1,9 @@
 import {useRouter} from "next/router";
-import React = require("react");
+// import React = require("react");
 import {useConfig} from "nextra-theme-docs";
 
 export default {
-    // logo: <strong>Golang Uzbekistan</strong>,
+
     logo: (
         <>
                <img width="70" src="https://go.dev/blog/go-brand/Go-Logo/PNG/Go-Logo_Aqua.png"/>
@@ -56,6 +56,8 @@ export default {
     );
         },
 
+
+
     search: {
         emptyResult: (
             <div className="text-center">Hech narsa topilmadi</div>
@@ -75,6 +77,7 @@ export default {
         prev: true,
         next: true
     },
+
     defaultShowCopyCode: true,
     primaryHue:178,
     docsRepositoryBase: 'https://github.com/golang-uz',
