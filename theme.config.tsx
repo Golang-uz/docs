@@ -31,7 +31,7 @@ export default {
     const socialCard =
       route === "/" || !title
         ? "https://go.dev/blog/go-brand/Go-Logo/PNG/Go-Logo_Aqua.png"
-        : `https://golang-uz.netlify.app/`;
+        : `https://docs-golanguz.vercel.app/`;
 
     return (
       <>
@@ -56,8 +56,8 @@ export default {
           name="twitter:image"
           content="https://go.dev/blog/go-brand/Go-Logo/PNG/Go-Logo_Aqua.png"
         />
-        <meta name="twitter:site:domain" content="golang-uz.netlify.app" />
-        <meta name="twitter:url" content="https://golang-uz.netlify.app/" />
+        <meta name="twitter:site:domain" content="docs-golanguz.vercel.app" />
+        <meta name="twitter:url" content="https://docs-golanguz.vercel.app/" />
         <meta
           name="og:title"
           content={title ? title + " – Golang" : "Golang"}
